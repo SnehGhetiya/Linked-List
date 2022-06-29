@@ -80,19 +80,19 @@ class LinkedList {
   }
 
   //reverse the list of nodes
-	reverse() {
-		let previousNode = null;
-		let currentNode = this.head;
-		let nextNode = null;
-		while (currentNode !== null) {
-			nextNode = currentNode.next;
-			currentNode.next = previousNode;
-			previousNode = currentNode;
-			currentNode = nextNode;
-		}
-		this.head = previousNode;
-		return this.printList();
-	}
+  reverse() {
+    let previousNode = null;
+    let currentNode = this.head;
+    let nextNode = null;
+	while (currentNode !== null) {
+	    nextNode = currentNode.next;
+	    currentNode.next = previousNode;
+	    previousNode = currentNode;
+	    currentNode = nextNode;
+	    }
+	this.head = previousNode;
+	return this.printList();
+    }
 }
 
 const linkedList = new LinkedList(10);
